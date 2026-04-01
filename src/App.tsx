@@ -42,13 +42,14 @@ function App() {
   const total = filteredExpenses.reduce((sum, e) => sum + e.amount, 0);
 
   return (
-    <div className="p-6 bg-gray-200 min-h-screen">
-      <h1 className="text-2xl font-bold mb-4">Smart Expense Tracker</h1>
+    <div className="p-6 bg-gray-200 items-center  min-h-screen">
+      <h1 className="text-2xl justify-center font-bold mb-4">Smart Expense Tracker</h1>
 
       <ExpenseForm addExpense={addExpense} />
       <Filters filter={filter} setFilter={setFilter} />
 
-      <h2 className="mt-4 text-lg font-semibold">Total: ₹{total}</h2>
+      <h2 className="mt-4 text-lg font-semibold">Total: ₹{total}</h2> 
+      
 
       <ExpenseChart expenses={filteredExpenses} />
       <ExpenseList expenses={filteredExpenses} deleteExpense={deleteExpense} />
